@@ -39,11 +39,11 @@
     text-rendering:optimizeLegibility;
     padding:clamp(26px,5vw,52px) 22px clamp(56px,10vw,120px);
   }
-  .wrap{max-width:700px;margin:0 auto}
+  .wrap{max-width:1120px;margin:0 auto}
 
   /* nav */
   .nav{position:sticky;top:0;z-index:20;background:rgba(242,245,250,.88);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
-  .navwrap{max-width:700px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 14px;flex-wrap:wrap}
+  .navwrap{max-width:1120px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 14px;flex-wrap:wrap}
   .navwrap .brand{font-size:13.5px;font-weight:800;letter-spacing:.04em;color:var(--ink);text-decoration:none;border:0}
   .navwrap nav{display:flex;gap:clamp(12px,2.4vw,22px);flex-wrap:wrap}
   .navwrap nav a{font-size:13.5px;font-weight:600;color:var(--ink-2);text-decoration:none;border:0;padding:2px 0;position:relative}
@@ -69,9 +69,11 @@
   .hero .name::after{content:"";flex:1;height:1px;background:var(--line)}
   .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(31px,6.6vw,53px);line-height:1.34;letter-spacing:.005em}
   .hero h1 .u{color:var(--accent)}
-  .hero .lead{margin-top:28px;font-size:clamp(17px,2.5vw,19px);color:var(--ink-2);max-width:52ch;line-height:1.95}
+  .hero .lead{font-size:clamp(17px,2.5vw,19px);color:var(--ink-2);line-height:1.95}
+  .hero-cols{display:grid;gap:28px;margin-top:28px}
+  @media(min-width:860px){.hero-cols{grid-template-columns:1.55fr 1fr;column-gap:56px;gap:0 56px;align-items:start}}
 
-  .taggroups{margin-top:32px;display:grid;gap:13px}
+  .taggroups{display:grid;gap:13px}
   .tagrow{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
   .tagrow .cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);font-weight:700;min-width:58px;flex:0 0 auto;padding-top:6px}
   .tagrow .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -80,19 +82,21 @@
 
   /* section frame */
   section{padding-top:clamp(48px,7vw,74px);border-top:1px solid var(--line);margin-top:clamp(48px,7vw,74px);scroll-margin-top:88px}
-  .lead-row{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+  .lead-row{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:26px}
   .lead-row h2{font-family:var(--serif);font-weight:700;font-size:clamp(23px,3.8vw,30px);letter-spacing:.01em}
-  .lead-row .eyebrow{flex:0 0 auto}
-  @media(max-width:540px){.lead-row{flex-direction:column;gap:8px}}
+  @media(min-width:860px){
+    section{display:grid;grid-template-columns:186px 1fr;column-gap:56px;align-items:start}
+    .lead-row{margin-bottom:0}
+  }
 
   /* profile */
-  .bio{font-size:16.5px;color:var(--ink-2);line-height:1.95;max-width:56ch}
+  .bio{font-size:16.5px;color:var(--ink-2);line-height:1.95}
 
   /* about lead */
   .lead-strength{margin-bottom:40px}
   .lead-strength .bar{display:block;width:38px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:18px}
   .lead-strength h3{font-size:clamp(22px,3.8vw,29px);font-weight:800;letter-spacing:-.012em;margin-bottom:15px}
-  .lead-strength p{font-size:clamp(16px,2.4vw,18px);color:var(--ink-2);line-height:1.95;max-width:50ch}
+  .lead-strength p{font-size:clamp(16px,2.4vw,18px);color:var(--ink-2);line-height:1.95}
 
   /* about list */
   .traits{display:grid;gap:0}
@@ -114,11 +118,11 @@
   .did + .desc{margin-top:16px}
 
   /* closing */
-  .closing p{font-size:17.5px;color:var(--ink);line-height:1.95;max-width:54ch}
+  .closing p{font-size:17.5px;color:var(--ink);line-height:1.95}
   .closing p + p{margin-top:16px}
   .next{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
   .next .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .next p{margin-top:12px;font-size:16.5px;color:var(--ink-2);line-height:1.95;font-weight:500;max-width:54ch}
+  .next p{margin-top:12px;font-size:16.5px;color:var(--ink-2);line-height:1.95;font-weight:500}
   .next p b{color:var(--ink);font-weight:700}
 
   footer{margin-top:clamp(50px,8vw,74px);font-size:13px;letter-spacing:.12em;color:var(--soft);text-transform:uppercase}
@@ -150,45 +154,54 @@
   <header class="hero" id="top">
     <div class="name">Inaoka Yuka — Portfolio</div>
     <h1><span class="nb">AIを、<span class="u">対話</span>で</span><span class="nb">現場に根づかせる。</span></h1>
+    <div class="hero-cols">
     <p class="lead">
       国際教養大学2年。地域企業の学生インターンとして、海外企業の誘致と社内のDXに取り組んでいます。
       AIが好きで、毎日使い倒しながら、現場の人と一緒に本当に使われるAIを育てています。
     </p>
+    <div class="hero-meta">
     <div class="taggroups">
       <div class="tagrow"><span class="cat">所属</span><div class="chips"><span class="chip">国際教養大学 2年</span></div></div>
       <div class="tagrow"><span class="cat">スキル</span><div class="chips"><span class="chip">生成AI活用</span><span class="chip">業務フロー可視化</span><span class="chip">ナレッジサイト構築</span><span class="chip">データ分析</span><span class="chip">英語</span></div></div>
     </div>
     <p class="contact"><a href="mailto:b2500343@gl.aiu.ac.jp">b2500343@gl.aiu.ac.jp</a></p>
+    </div>
+    </div>
   </header>
 
   <!-- PROFILE -->
   <section id="profile">
     <div class="lead-row reveal"><span class="eyebrow">Profile</span><h2>経歴</h2></div>
+    <div class="sec-body">
     <p class="bio reveal">
       秋田県立秋田高等学校を経て、国際教養大学 国際教養学部に在学。すべて英語の環境でビジネスを学んでいます。<br class="brw">在学中、東北物産株式会社 ライフデザイン部に学生インターンとして参画し、<br class="brw"><strong class="nb">海外企業の秋田進出支援</strong>と<strong>社内のAI・DX推進</strong>という新規事業に携わっています。<br class="brw">学生という立場だからこそ、一人で抱え込まず、<span class="em nb">チームと協力しながら進める</span>ことを大切にしています。
     </p>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="lead-row reveal"><span class="eyebrow">About</span><h2>私について</h2></div>
+    <div class="sec-body">
     <div class="lead-strength reveal">
       <span class="bar"></span>
       <h3>対話で、本質を引き出す</h3>
-      <p>まずこちらから自己開示し、共感を示す。<br class="brw">そして、整理されていない相手の困りごとを、対話を通じて引き出していく。曖昧な要望を具体的な施策に落とし込み、<br class="brw">前例のない状況でも、一歩ずつ前に進めてきました。</p>
+      <p>まずこちらから自己開示し、共感を示す。<br class="brw">そして、整理されていない相手の困りごとを、対話を通じて引き出していく。曖昧な要望を具体的な施策に落とし込み、前例のない状況でも、一歩ずつ前に進めてきました。</p>
     </div>
     <div class="traits">
       <div class="trait reveal"><b>AIが好きで、毎日使い倒している</b><span>海外企業の進出プロジェクトでは、0→1のたたき台づくりにClaudeを使い、そこから自分の判断で磨き込んで一気に形にしました。日常でも、動画の10倍速視聴やToDo整理まで手放せません。</span></div>
       <div class="trait reveal"><b>立ち上がりが速い</b><span>2026年初めにゼロから始め、半年で社内のAI推進を任される役割に。だから「AIって何？」と身構える人の気持ちも分かります。</span></div>
-      <div class="trait reveal"><b>手を動かして学ぶ</b><span>情報を集めるだけで終わらせず、まず自分で触ってみる。使って初めて分かることを大事にしています。</span></div>
+      <div class="trait reveal"><b>手を動かして学ぶ</b><span>情報を集めるだけで終わらせず、まず自分で触ってみる。<br class="brw">使って初めて分かることを大事にしています。</span></div>
       <div class="trait reveal"><b>オーナーシップと根気</b><span>「どうしたらいいか」を考えて自ら動く。つまずいても調べ、解けなければ人に聞き、前へ進みます。</span></div>
       <div class="trait reveal"><b>変化を楽しみ、チームで形にする</b><span>日々のAIの変化を追うこと自体が楽しい。その熱量を、チームで形にしていきます。</span></div>
+    </div>
     </div>
   </section>
 
   <!-- WORK -->
   <section id="work">
     <div class="lead-row reveal"><span class="eyebrow">Experience</span><h2>インターンでの取り組み</h2></div>
+    <div class="sec-body">
     <div class="job reveal">
       <div class="role">東北物産株式会社 ライフデザイン部 ／ 学生インターン（秋田）</div>
       <h3>海外企業の秋田進出を支える</h3>
@@ -203,16 +216,19 @@
       </ul>
       <p class="desc">「こんなこともできるんだ」を積み重ね、一人ひとりが自分で思考を広げられる状態を目指しています。</p>
     </div>
+    </div>
   </section>
 
   <!-- CLOSING -->
   <section id="vision" class="closing">
     <div class="lead-row reveal"><span class="eyebrow">Vision</span><h2>これから</h2></div>
+    <div class="sec-body">
     <p class="reveal">AIを仕事にも日常にも取り入れてから、<br class="brw"><span class="em">毎日がとても楽しくなりました。</span>この楽しさを、一人でも多くの人に届けたい——それが、私がAIに関わり続けたいいちばんの理由です。</p>
     <p class="reveal">まだAIを使っていない現場に入り、対話を通じて“使われるAI”を届ける。<br class="brw">その最前線で挑戦したいと考えています。</p>
     <div class="next reveal">
       <span class="tag">今後の予定</span>
       <p>東京のAI・DXの現場で本気で挑戦するため、<b>大学を休学し、2026年8月から東京でフルコミットできる体制</b>を整えています（7月末〜8月に転居予定）。</p>
+    </div>
     </div>
   </section>
 
