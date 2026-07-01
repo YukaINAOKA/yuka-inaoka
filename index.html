@@ -1,482 +1,254 @@
-<title>DigiRise応募ポートフォリオ｜稲岡佑果</title>
+<title>稲岡佑果 ポートフォリオ｜AI × 現場 × 人</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="国際教養大学2年・稲岡佑果のポートフォリオ。海外企業の秋田進出支援と、社内のAI（Claude）推進を手がける学生インターン。対話で本質を引き出し、現場で“使われるAI”を育てます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yukainaoka.github.io/yuka-inaoka/">
+<meta property="og:title" content="稲岡佑果 ポートフォリオ｜AI × 現場 × 人">
+<meta property="og:description" content="海外企業の秋田進出支援と社内のAI推進を手がける学生インターン。対話で本質を引き出し、現場で“使われるAI”を育てます。">
+<meta property="og:image" content="https://yukainaoka.github.io/yuka-inaoka/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yukainaoka.github.io/yuka-inaoka/ogp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#EAEEF1;        /* cool blueprint paper */
-    --paper:#FBFCFD;     /* card surface */
-    --ink:#16242E;       /* deep teal-slate, near-black */
-    --ink-2:#33454F;
-    --ink-soft:#5B6B73;
-    --line:#D4DBE0;
-    --line-strong:#B9C3C9;
-    --accent:#BE6A1A;    /* burnt ochre — single accent */
-    --accent-ink:#8F4E0F;
-    --accent-tint:#F4E7D3;
-    --good:#2E6E62;
-    --maxw:780px;
-    --mono:ui-monospace,"SFMono-Regular","Menlo","Consolas","Courier New",monospace;
-    --jp:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",system-ui,sans-serif;
+    --paper:#F2F5FA;
+    --ink:#121A29;
+    --ink-2:#3A4658;
+    --soft:#566173;
+    --line:#DBE1EC;
+    --line-2:#C4CDDB;
+    --accent:#1E47CC;
+    --accent-2:#15348F;
+    --chip-bg:#E8EDFA;
+    --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --serif:"Zen Old Mincho","Yu Mincho","YuMincho","Hiragino Mincho ProN","Hiragino Mincho Pro","Noto Serif JP",serif;
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   .page{
-    background:
-      linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 28px,
-      var(--bg);
-    background-attachment:fixed;
-    color:var(--ink);
-    font-family:var(--jp);
-    line-height:1.85;
-    -webkit-font-smoothing:antialiased;
-    padding:clamp(18px,4vw,56px) 16px 80px;
-  }
-  .wrap{max-width:var(--maxw);margin:0 auto}
-
-  /* ---------- shared bits ---------- */
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--accent-ink);font-weight:600;
-    display:inline-flex;align-items:center;gap:8px;
-  }
-  .eyebrow::before{content:"";width:18px;height:1px;background:var(--accent);display:inline-block}
-  h1,h2,h3{text-wrap:balance;line-height:1.25;margin:0}
-  a{color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1px}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-
-  section{margin-top:clamp(40px,7vw,72px)}
-  .sec-head{margin-bottom:22px}
-  .sec-head h2{font-size:clamp(22px,4vw,28px);font-weight:800;margin-top:10px;letter-spacing:.01em}
-
-  /* ---------- hero ---------- */
-  .hero{
     background:var(--paper);
-    border:1px solid var(--line-strong);
-    border-top:4px solid var(--accent);
-    padding:clamp(26px,5vw,44px);
-    box-shadow:0 1px 0 rgba(22,36,46,.04),0 18px 40px -28px rgba(22,36,46,.35);
-    animation:rise .6s cubic-bezier(.2,.7,.2,1) both;
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    padding:clamp(26px,5vw,52px) 22px clamp(56px,10vw,120px);
   }
-  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion:reduce){.hero{animation:none}}
-  .hero .kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
-  .chip{
-    font-family:var(--mono);font-size:11px;letter-spacing:.04em;
-    background:var(--accent-tint);color:var(--accent-ink);
-    padding:6px 11px;border-radius:999px;border:1px solid #E3CFA8;font-weight:600;
-  }
-  .hero h1{
-    font-size:clamp(30px,6.5vw,50px);font-weight:800;letter-spacing:-.01em;
-    margin:18px 0 0;
-  }
-  .hero h1 .hl{color:var(--accent-ink);position:relative;white-space:nowrap}
-  .hero .lede{font-size:clamp(15px,2.4vw,17px);color:var(--ink-2);margin:16px 0 0;max-width:60ch}
-  .meta{
-    margin-top:26px;border-top:1px dashed var(--line-strong);padding-top:18px;
-    display:grid;grid-template-columns:repeat(2,1fr);gap:14px 24px;
-  }
-  .meta dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
-  .meta dd{margin:2px 0 0;font-weight:600;font-size:14px}
-  .note{
-    margin-top:16px;font-size:12.5px;color:var(--ink-soft);
-    background:#FFF7E9;border:1px dashed #E0C690;border-radius:8px;padding:10px 13px;
-  }
-  .note b{color:var(--accent-ink)}
+  .wrap{max-width:700px;margin:0 auto}
 
-  /* ---------- strengths ---------- */
-  .pillars{display:grid;gap:14px}
-  @media(min-width:640px){.pillars{grid-template-columns:repeat(3,1fr)}}
-  .pillar{
-    background:var(--paper);border:1px solid var(--line);border-radius:4px;
-    padding:20px 18px;position:relative;
-  }
-  .pillar .pn{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em}
-  .pillar h3{font-size:16px;font-weight:800;margin:10px 0 8px}
-  .pillar p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.7}
+  /* nav */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(242,245,250,.88);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+  .navwrap{max-width:700px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 14px;flex-wrap:wrap}
+  .navwrap .brand{font-size:13.5px;font-weight:800;letter-spacing:.04em;color:var(--ink);text-decoration:none;border:0}
+  .navwrap nav{display:flex;gap:clamp(12px,2.4vw,22px);flex-wrap:wrap}
+  .navwrap nav a{font-size:13.5px;font-weight:600;color:var(--ink-2);text-decoration:none;border:0;padding:2px 0;position:relative}
+  .navwrap nav a:hover,.navwrap nav a.active{color:var(--accent)}
+  .navwrap nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:2px;background:var(--accent);transition:right .25s ease}
+  .navwrap nav a:hover::after,.navwrap nav a.active::after{right:0}
+  .navwrap a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 
-  /* ---------- projects ---------- */
-  .proj{
-    background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--accent);
-    border-radius:4px;padding:clamp(18px,3vw,26px);margin-top:16px;
-  }
-  .proj .ptop{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline;justify-content:space-between}
-  .proj h3{font-size:clamp(17px,3vw,20px);font-weight:800}
-  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ink-soft);
-    border:1px solid var(--line-strong);border-radius:999px;padding:3px 9px;white-space:nowrap}
-  .prole{font-family:var(--mono);font-size:11px;color:var(--accent-ink);margin:6px 0 16px;letter-spacing:.04em}
-  .pgrid{display:grid;gap:0}
-  .prow{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:11px 0;border-top:1px dashed var(--line)}
-  .prow:first-child{border-top:0}
-  .prow .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;padding-top:2px}
-  .prow .v{font-size:14px;color:var(--ink-2);line-height:1.7;margin:0}
-  .prow .v b{color:var(--ink);font-weight:700}
-  @media(max-width:480px){.prow{grid-template-columns:1fr;gap:3px}}
-  .wip{margin-top:16px;font-size:13px;color:var(--ink-soft);padding-left:14px;border-left:2px solid var(--line-strong)}
-  .wip b{color:var(--ink-2)}
+  .eyebrow{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--accent);display:inline-block}
+  h1,h2,h3{margin:0;line-height:1.22;text-wrap:balance;font-weight:800;letter-spacing:-.01em}
+  p{margin:0}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:1px}
+  a:hover{border-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .em{color:var(--accent-2);font-weight:700}
+  strong{font-weight:700}
+  .nb{white-space:nowrap}
+  @media(max-width:640px){br.brw{display:none}}
 
-  /* ---------- skills ---------- */
-  .skills{display:grid;gap:14px}
-  @media(min-width:560px){.skills{grid-template-columns:1fr 1fr}}
-  .skblock{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px}
-  .skblock h3{font-size:13px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:12px}
-  .pills{display:flex;flex-wrap:wrap;gap:7px}
-  .pill{font-size:12.5px;background:#EEF2F4;border:1px solid var(--line);border-radius:5px;padding:5px 10px;color:var(--ink-2);font-weight:600}
+  /* hero */
+  .hero{padding-bottom:clamp(40px,6vw,60px)}
+  .hero .name{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft);font-weight:700;margin-bottom:30px;display:flex;gap:14px;align-items:center}
+  .hero .name::after{content:"";flex:1;height:1px;background:var(--line)}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(31px,6.6vw,53px);line-height:1.34;letter-spacing:.005em}
+  .hero h1 .u{color:var(--accent)}
+  .hero .lead{margin-top:28px;font-size:clamp(17px,2.5vw,19px);color:var(--ink-2);max-width:52ch;line-height:1.95}
 
-  /* ---------- fit checklist ---------- */
-  .fit{display:grid;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden}
-  .fitrow{display:grid;grid-template-columns:1fr 1.25fr;gap:16px;padding:16px clamp(14px,2.5vw,20px);border-top:1px solid var(--line)}
-  .fitrow:first-child{border-top:0}
-  .fitrow .req{font-size:13px;color:var(--ink);font-weight:700;line-height:1.6}
-  .fitrow .req .badge{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
-    padding:2px 7px;border-radius:999px;margin-bottom:7px}
-  .b-strong{background:var(--accent-tint);color:var(--accent-ink);border:1px solid #E3CFA8}
-  .b-doing{background:#E2EEF0;color:#2E6E62;border:1px solid #BCD9D6}
-  .b-grow{background:#EEF0F2;color:var(--ink-soft);border:1px solid var(--line-strong)}
-  .fitrow .ans{font-size:13.5px;color:var(--ink-2);line-height:1.7;margin:0}
-  .fitrow .ans b{color:var(--ink);font-weight:700}
-  @media(max-width:560px){.fitrow{grid-template-columns:1fr;gap:6px}}
+  .taggroups{margin-top:32px;display:grid;gap:13px}
+  .tagrow{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+  .tagrow .cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);font-weight:700;min-width:58px;flex:0 0 auto;padding-top:6px}
+  .tagrow .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:13px;color:var(--ink-2);background:var(--chip-bg);border:1px solid var(--line-2);border-radius:7px;padding:7px 13px;font-weight:600;line-height:1}
+  .contact{margin-top:22px;font-size:14.5px;color:var(--soft)}
 
-  /* ---------- philosophy callout ---------- */
-  .philo{background:linear-gradient(180deg,#FFF8EC,#FBF1DD);border:1px solid #E6CFA3;
-    border-left:4px solid var(--accent);border-radius:6px;padding:clamp(18px,3vw,26px);margin-top:16px}
-  .philo .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink)}
-  .philo p{margin:10px 0 0;font-size:clamp(15px,2.3vw,17px);line-height:1.85;color:var(--ink);font-weight:600}
-  .philo p .hl{color:var(--accent-ink)}
+  /* section frame */
+  section{padding-top:clamp(48px,7vw,74px);border-top:1px solid var(--line);margin-top:clamp(48px,7vw,74px);scroll-margin-top:88px}
+  .lead-row{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
+  .lead-row h2{font-family:var(--serif);font-weight:700;font-size:clamp(23px,3.8vw,30px);letter-spacing:.01em}
+  .lead-row .eyebrow{flex:0 0 auto}
+  @media(max-width:540px){.lead-row{flex-direction:column;gap:8px}}
 
-  /* ---------- welcome / persona match ---------- */
-  .matchgrid{display:grid;gap:10px}
-  @media(min-width:560px){.matchgrid{grid-template-columns:1fr 1fr}}
-  .mitem{display:flex;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:14px 15px}
-  .mitem .ck{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:var(--good);color:#fff;
-    font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
-  .mitem .mtx{font-size:13px;color:var(--ink-2);line-height:1.6}
-  .mitem .mtx b{display:block;color:var(--ink);font-weight:800;font-size:13.5px;margin-bottom:2px}
+  /* profile */
+  .bio{font-size:16.5px;color:var(--ink-2);line-height:1.95;max-width:56ch}
 
-  /* ---------- motivation (dark) ---------- */
-  .why{
-    background:var(--ink);color:#E9EEF0;border-radius:6px;
-    padding:clamp(26px,5vw,46px);
-  }
-  .why .eyebrow{color:#E7B770}
-  .why .eyebrow::before{background:#E7B770}
-  .why h2{color:#fff;font-size:clamp(22px,4.2vw,30px);font-weight:800;margin:12px 0 0}
-  .why .intro{color:#C3CDD2;margin:16px 0 28px;max-width:62ch;font-size:15px}
-  .why-block{border-top:1px solid #2C3E47;padding:20px 0}
-  .why-block:last-child{padding-bottom:0}
-  .why-block h3{font-size:15px;font-weight:800;color:#F2D9B4;margin-bottom:8px;display:flex;gap:10px;align-items:baseline}
-  .why-block h3 .q{font-family:var(--mono);font-size:11px;color:#7E939C;letter-spacing:.08em}
-  .why-block p{margin:0;color:#CBD5D9;font-size:14.5px;line-height:1.9}
-  .why-block p+p{margin-top:10px}
-  .pull{color:#F2D9B4;font-weight:700}
-  .kakugo{margin-top:24px;background:#1E3038;border:1px solid #34474F;border-radius:8px;padding:18px 20px}
-  .kakugo .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#E7B770}
-  .kakugo p{margin:8px 0 0;color:#EAF0F2;font-size:14.5px;font-weight:600;line-height:1.8}
+  /* about lead */
+  .lead-strength{margin-bottom:40px}
+  .lead-strength .bar{display:block;width:38px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:18px}
+  .lead-strength h3{font-size:clamp(22px,3.8vw,29px);font-weight:800;letter-spacing:-.012em;margin-bottom:15px}
+  .lead-strength p{font-size:clamp(16px,2.4vw,18px);color:var(--ink-2);line-height:1.95;max-width:50ch}
 
-  /* ---------- copy block ---------- */
-  .copybox{margin-top:22px}
-  .copybox .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
-  .copybox .bar span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
-  .copybtn{font-family:var(--mono);font-size:11px;letter-spacing:.06em;cursor:pointer;
-    background:var(--ink);color:#fff;border:0;border-radius:5px;padding:7px 13px}
-  .copybtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .copybox textarea{
-    width:100%;min-height:230px;resize:vertical;
-    font-family:var(--jp);font-size:13.5px;line-height:1.85;color:var(--ink);
-    background:var(--paper);border:1px solid var(--line-strong);border-radius:6px;padding:16px;
-  }
+  /* about list */
+  .traits{display:grid;gap:0}
+  @media(min-width:620px){.traits{grid-template-columns:1fr 1fr;column-gap:46px}}
+  .trait{padding:20px 0;border-top:1px solid var(--line)}
+  .trait b{display:block;font-size:16px;margin-bottom:6px;color:var(--ink)}
+  .trait span{font-size:14.5px;color:var(--ink-2);line-height:1.8}
 
-  /* ---------- footer ---------- */
-  .foot{margin-top:clamp(40px,7vw,64px);border-top:2px solid var(--ink);padding-top:18px;
-    display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;
-    font-size:13px;color:var(--ink-soft)}
-  .foot .nm{font-weight:800;color:var(--ink);font-size:15px}
+  /* work */
+  .job{padding:30px 0;border-top:1px solid var(--line)}
+  .job:first-of-type{border-top:0;padding-top:4px}
+  .job .role{font-size:13px;letter-spacing:.06em;color:var(--soft);font-weight:700;margin-bottom:10px}
+  .job h3{font-size:clamp(19px,3vw,22px)}
+  .job .desc{margin-top:14px;font-size:15.5px;color:var(--ink-2);line-height:1.9}
+  .did{margin:16px 0 0;padding:0;display:grid;gap:10px}
+  .did li{list-style:none;position:relative;padding-left:22px;font-size:15px;color:var(--ink-2);line-height:1.8}
+  .did li::before{content:"";position:absolute;left:2px;top:11px;width:7px;height:7px;background:var(--accent);border-radius:2px;transform:rotate(45deg)}
+  .did li strong{color:var(--ink);font-weight:700}
+  .did + .desc{margin-top:16px}
+
+  /* closing */
+  .closing p{font-size:17.5px;color:var(--ink);line-height:1.95;max-width:54ch}
+  .closing p + p{margin-top:16px}
+  .next{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+  .next .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .next p{margin-top:12px;font-size:16.5px;color:var(--ink-2);line-height:1.95;font-weight:500;max-width:54ch}
+  .next p b{color:var(--ink);font-weight:700}
+
+  footer{margin-top:clamp(50px,8vw,74px);font-size:13px;letter-spacing:.12em;color:var(--soft);text-transform:uppercase}
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="navwrap">
+    <a href="#top" class="brand">稲岡 佑果</a>
+    <nav>
+      <a href="#profile">経歴</a>
+      <a href="#about">私について</a>
+      <a href="#work">経験</a>
+      <a href="#vision">これから</a>
+    </nav>
+  </div>
+</div>
 
 <div class="page">
 <div class="wrap">
 
-  <!-- ===================== HERO ===================== -->
-  <header class="hero">
-    <div class="kicker">
-      <span class="eyebrow">Internship Application — 2026</span>
-      <span class="chip">長期インターン｜クライアント常駐・現場支援型</span>
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="name">Inaoka Yuka — Portfolio</div>
+    <h1><span class="nb">AIを、<span class="u">対話</span>で</span><span class="nb">現場に根づかせる。</span></h1>
+    <p class="lead">
+      国際教養大学2年。地域企業の学生インターンとして、海外企業の誘致と社内のDXに取り組んでいます。
+      AIが好きで、毎日使い倒しながら、現場の人と一緒に本当に使われるAIを育てています。
+    </p>
+    <div class="taggroups">
+      <div class="tagrow"><span class="cat">所属</span><div class="chips"><span class="chip">国際教養大学 2年</span></div></div>
+      <div class="tagrow"><span class="cat">スキル</span><div class="chips"><span class="chip">生成AI活用</span><span class="chip">業務フロー可視化</span><span class="chip">ナレッジサイト構築</span><span class="chip">データ分析</span><span class="chip">英語</span></div></div>
     </div>
-
-    <h1>現場の曖昧な課題を、<span class="hl">対話で引き出し</span>実装まで届ける。</h1>
-
-    <p class="lede">
-      前例ゼロの海外企業誘致を「対話」で前に進め、社内のDXを自ら開拓してきた学生です。
-      AIは配って終わりではなく、人の隣で泥臭く伴走してこそ根づく——
-      その確信を、DigiRiseのクライアント常駐の現場で形にしたいです。
-    </p>
-
-    <dl class="meta">
-      <div><dt>氏名 / Name</dt><dd>稲岡 佑果（イナオカ ユカ）</dd></div>
-      <div><dt>所属 / Affiliation</dt><dd>国際教養大学（AIU）2年・3年半で卒業見込み</dd></div>
-      <div><dt>連絡先 / Contact</dt><dd>b2500343@gl.aiu.ac.jp</dd></div>
-      <div><dt>応募先 / Apply to</dt><dd>株式会社DigiRise</dd></div>
-    </dl>
-
-    <p class="note">
-      <b>提出前メモ</b>：電話番号・顔写真・GitHub/制作物リンクは必要に応じて追記を。実証実験のCVR等の数値は、開示してよい範囲かインターン先に確認のうえ調整してください。
-    </p>
+    <p class="contact"><a href="mailto:b2500343@gl.aiu.ac.jp">b2500343@gl.aiu.ac.jp</a></p>
   </header>
 
-  <!-- ===================== PROFILE ===================== -->
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">Profile</span>
-      <h2>3つの強み</h2>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pn">01</div>
-        <h3>対話で本質を引き出す</h3>
-        <p>相手の言語化されていないニーズを聞き出し、曖昧な期待を「具体的な施策」へ落とし込む。前例ゼロの状況を前に進めてきた力です。</p>
-      </div>
-      <div class="pillar">
-        <div class="pn">02</div>
-        <h3>枠を超えるオーナーシップ</h3>
-        <p>与えられた業務だけでなく「もっと良くするには？」を常に考え、社内DX推進を自ら開拓・実行。役割を待たずに動きます。</p>
-      </div>
-      <div class="pillar">
-        <div class="pn">03</div>
-        <h3>やり切るバイタリティ</h3>
-        <p>全授業英語・卒業まで4年超が約半数のAIUを、独学力でサバイブし3年半で卒業見込み。課題を泥臭くやり切ります。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== WORK ===================== -->
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">Selected Work</span>
-      <h2>実績</h2>
-    </div>
-
-    <!-- P1 -->
-    <article class="proj">
-      <div class="ptop">
-        <h3>フィンランド企業の秋田進出支援インターン</h3>
-        <span class="tag">海外企業誘致 / 0→1</span>
-      </div>
-      <div class="prole">ROLE — 東北物産株式会社 ライフデザイン部 新規事業開発担当（中心メンバー）</div>
-      <div class="pgrid">
-        <div class="prow"><div class="k">課題</div><p class="v">前例ゼロ・人手不足・返信は週1回。さらに先方は<b>CEO交代直後</b>で「実証実験で何を得たいか」自体が曖昧。3か月で進出判断を引き出すミッション。</p></div>
-        <div class="prow"><div class="k">やったこと</div><p class="v">結果を急がず「まず相手を理解する」ことに注力。自ら働きかけて<b>CEOとの週次MTGを設定</b>し、対話を重ねて漠然とした要望を「拡販ではなく、<b>企業哲学を秋田にローカライズして体験させる</b>」という具体施策へ落とし込んだ。</p></div>
-        <div class="prow"><div class="k">AI活用</div><p class="v">推進の過程で<b>資料作成やデータ分析に生成AIを活用</b>。現場で実際にAIを使う実務の感覚を持っている。</p></div>
-        <div class="prow"><div class="k">成果</div><p class="v">実証実験で<b>高いCVRを記録</b>。秋田とフィンランドの親和性も示し、<b>先方の秋田進出決定</b>に結実。</p></div>
-        <div class="prow"><div class="k">DigiRiseとの接点</div><p class="v">＝現場に入り、対話で曖昧な課題を引き出し、具体的な施策へ落とし込む。クライアント常駐・現場支援型に直結する動き方。</p></div>
-      </div>
-    </article>
-
-    <!-- P2 -->
-    <article class="proj">
-      <div class="ptop">
-        <h3>社内DX推進（自ら開拓）</h3>
-        <span class="tag">生成AI / 業務効率化</span>
-      </div>
-      <div class="prole">ROLE — 同・ライフデザイン部での社内DX推進（担当を自ら獲得）</div>
-      <div class="pgrid">
-        <div class="prow"><div class="k">課題</div><p class="v">本来のインターン業務の傍ら、<b>社内ワークフローの非効率</b>に気づいた。誰かに任されたわけではない。</p></div>
-        <div class="prow"><div class="k">やったこと</div><p class="v">自ら改善を提案し、社内DX推進を担当。<b>生成AIで1時間かかっていた業務が数分に短縮</b>される現場を体感した。</p></div>
-        <div class="prow"><div class="k">この経験の意味</div><p class="v">「AIを使える人は、そうでない人の<b>何人分もの仕事ができてしまう</b>」という危機感が、私がAIの本質を追求したいと思った原点であり、<b>DigiRise志望のきっかけ</b>。</p></div>
-      </div>
-    </article>
-
-    <p class="wip">
-      <b>いま挑戦中：</b>地元企業の採用サイトを制作中（実装フェーズ）、生成AIツールの比較検証など、AI活用を自分の手で試し続けています。
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="lead-row reveal"><span class="eyebrow">Profile</span><h2>経歴</h2></div>
+    <p class="bio reveal">
+      秋田県立秋田高等学校を経て、国際教養大学 国際教養学部に在学。すべて英語の環境でビジネスを学んでいます。<br class="brw">在学中、東北物産株式会社 ライフデザイン部に学生インターンとして参画し、<br class="brw"><strong class="nb">海外企業の秋田進出支援</strong>と<strong>社内のAI・DX推進</strong>という新規事業に携わっています。<br class="brw">学生という立場だからこそ、一人で抱え込まず、<span class="em nb">チームと協力しながら進める</span>ことを大切にしています。
     </p>
   </section>
 
-  <!-- ===================== SKILLS ===================== -->
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">Skills &amp; Stance</span>
-      <h2>持っている武器</h2>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="lead-row reveal"><span class="eyebrow">About</span><h2>私について</h2></div>
+    <div class="lead-strength reveal">
+      <span class="bar"></span>
+      <h3>対話で、本質を引き出す</h3>
+      <p>まずこちらから自己開示し、共感を示す。<br class="brw">そして、整理されていない相手の困りごとを、対話を通じて引き出していく。曖昧な要望を具体的な施策に落とし込み、<br class="brw">前例のない状況でも、一歩ずつ前に進めてきました。</p>
     </div>
-    <div class="skills">
-      <div class="skblock">
-        <h3>AI / DX</h3>
-        <div class="pills">
-          <span class="pill">生成AI日常活用</span><span class="pill">Claude Code（実践中）</span><span class="pill">社内DX推進</span>
-          <span class="pill">業務効率化</span><span class="pill">ワークフロー改善</span><span class="pill">AIキャッチアップ</span>
-        </div>
-      </div>
-      <div class="skblock">
-        <h3>ビジネス</h3>
-        <div class="pills">
-          <span class="pill">海外企業誘致</span><span class="pill">実証実験(PoC)推進</span>
-          <span class="pill">ニーズ抽出・具体化</span><span class="pill">ステークホルダー対話</span>
-        </div>
-      </div>
-      <div class="skblock">
-        <h3>言語 / コミュニケーション</h3>
-        <div class="pills">
-          <span class="pill">日本語（母語）</span><span class="pill">英語（AIU・全授業英語）</span>
-          <span class="pill">関係構築</span><span class="pill">傾聴・対話</span>
-        </div>
-      </div>
-      <div class="skblock">
-        <h3>スタンス</h3>
-        <div class="pills">
-          <span class="pill">当事者意識</span><span class="pill">最後まで泥臭く伴走</span>
-          <span class="pill">実践主義（60%で出す）</span><span class="pill">主体性 / 向上心</span><span class="pill">Less is more</span>
-        </div>
-      </div>
+    <div class="traits">
+      <div class="trait reveal"><b>AIが好きで、毎日使い倒している</b><span>海外企業の進出プロジェクトでは、0→1のたたき台づくりにClaudeを使い、そこから自分の判断で磨き込んで一気に形にしました。日常でも、動画の10倍速視聴やToDo整理まで手放せません。</span></div>
+      <div class="trait reveal"><b>立ち上がりが速い</b><span>2026年初めにゼロから始め、半年で社内のAI推進を任される役割に。だから「AIって何？」と身構える人の気持ちも分かります。</span></div>
+      <div class="trait reveal"><b>手を動かして学ぶ</b><span>情報を集めるだけで終わらせず、まず自分で触ってみる。使って初めて分かることを大事にしています。</span></div>
+      <div class="trait reveal"><b>オーナーシップと根気</b><span>「どうしたらいいか」を考えて自ら動く。つまずいても調べ、解けなければ人に聞き、前へ進みます。</span></div>
+      <div class="trait reveal"><b>変化を楽しみ、チームで形にする</b><span>日々のAIの変化を追うこと自体が楽しい。その熱量を、チームで形にしていきます。</span></div>
     </div>
   </section>
 
-  <!-- ===================== PHILOSOPHY ===================== -->
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">My Philosophy</span>
-      <h2>大切にしている考え</h2>
+  <!-- WORK -->
+  <section id="work">
+    <div class="lead-row reveal"><span class="eyebrow">Experience</span><h2>インターンでの取り組み</h2></div>
+    <div class="job reveal">
+      <div class="role">東北物産株式会社 ライフデザイン部 ／ 学生インターン（秋田）</div>
+      <h3>海外企業の秋田進出を支える</h3>
+      <p class="desc">学生インターンながら、チームの一員としてフィンランド企業の秋田進出を支援した、3か月のプロジェクト。<br class="brw">CEOと毎週対話を重ね、まず相手と自社のゴールを揃えることから着手しました。<br class="brw">抽象的な要望を具体的な要素に分解して施策へ落とし込み、資料作成やデータ分析にはClaudeを活用。<br class="brw">実証実験では想定を上回るコンバージョン率（CVR）を記録し、先方の<strong>秋田進出の決定</strong>につなげました。</p>
     </div>
-    <div class="philo">
-      <span class="lbl">Domain × AI</span>
-      <p>AIの知識を持つだけでは、結局<span class="hl">「組織に使われるだけのAI」</span>で終わってしまう。
-      業務フローとドメインを深く理解したうえで、<span class="hl">その現場に本当に合ったAIを導入してこそ</span>、初めて生産性は変わる——。
-      だからこそ、募集要件の「業務フローを理解し、改善ポイントを特定する」という一文に、私はいちばん強く共感しました。</p>
-    </div>
-    <div class="philo">
-      <span class="lbl">Action First — 60%で出す</span>
-      <p>頭の中でぐるぐる考え続けるより、<span class="hl">完成度60%でもいったん形にして世に出す。</span>
-      アイデアは人に見せ、フィードバックを受けて磨いてこそ価値になる——。
-      思考と同じくらい「実践」を大切にしているので、座学より<span class="hl">手を動かして学ぶ</span>現場が性に合っています。</p>
-    </div>
-  </section>
-
-  <!-- ===================== FIT ===================== -->
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">Requirements × Me</span>
-      <h2>募集要件 × 私</h2>
-    </div>
-    <div class="fit">
-      <div class="fitrow">
-        <div class="req"><span class="badge b-doing">実践中・伸ばす</span><br>Claude Code等での業務自動化・開発経験</div>
-        <p class="ans">正直、エンジニアとしての専門知識はこれからです。それでも<b>Claude Codeなどを日々触り、業務の自動化に少しずつ挑戦中</b>。学んで伸ばす意欲は誰にも負けません。</p>
-      </div>
-      <div class="fitrow">
-        <div class="req"><span class="badge b-strong">いちばんの共感・強み</span><br>業務フローを理解し、AI活用の改善点を特定</div>
-        <p class="ans"><b>私の哲学そのもの。</b>社内DXでは自ら業務フローの課題を見つけ、改善を提案・推進しました。ドメイン理解の上でAIを当てる発想が染みついています。</p>
-      </div>
-      <div class="fitrow">
-        <div class="req"><span class="badge b-strong">実績あり</span><br>生成AI（ChatGPT/Claude/Gemini）で効率化を提案・実行</div>
-        <p class="ans">社内DX推進で実践。<b>1時間の業務を数分に</b>短縮するなど、提案だけでなく実行まで担いました。</p>
-      </div>
-      <div class="fitrow">
-        <div class="req"><span class="badge b-strong">実践中</span><br>AIを使った資料作成・データ分析・レポート</div>
-        <p class="ans">フィンランド事業で<b>資料作成・データ分析に生成AIを活用中</b>。だから「現場でAIを使う人」の気持ちと詰まりどころが分かります。</p>
-      </div>
-      <div class="fitrow">
-        <div class="req"><span class="badge b-doing">対話力で活かせる</span><br>AI活用マニュアル作成・社員へのレクチャー</div>
-        <p class="ans">相手の理解度に合わせて<b>噛み砕いて伝える対話力</b>が強み。一人ひとりに伴走し、置いていかれる人をつくらない運営をします。</p>
-      </div>
-      <div class="fitrow">
-        <div class="req"><span class="badge b-doing">経験あり</span><br>本社との連携ミーティング・成果報告</div>
-        <p class="ans">フィンランド事業で<b>CEOとの週次MTGを自ら設計・運用</b>し、進捗を報告してきました。定例での連携・報告は得意分野です。</p>
-      </div>
+    <div class="job reveal">
+      <div class="role">同・ライフデザイン部 ／ 社内のAI（Claude）推進（自ら手を挙げて担当）</div>
+      <h3>社内にClaudeを広げる</h3>
+      <p class="desc">地方でDXがほとんど進まない中、社員のほとんどが「AIって何？」という状態からのスタート。<br class="brw">まず取り組んだのは、<strong>当たり前すぎて誰も疑問に思わない業務を可視化し、言葉にする</strong>こと。<br class="brw">その上でClaudeを使い、AIにできること・できないことを一緒に定義しながら進めています。</p>
+      <ul class="did">
+        <li><strong>Claudeで社内のナレッジ共有サイトを自作し、「AI活用シェア会」の場に。</strong>会社の経緯・履歴・社内の疑問を集約しつつ、「AIを教える」のではなく「自分はこう使った」「こんな活用ができる」を持ち寄って、みんながAIを好きになれる場をつくっています。</li>
+      </ul>
+      <p class="desc">「こんなこともできるんだ」を積み重ね、一人ひとりが自分で思考を広げられる状態を目指しています。</p>
     </div>
   </section>
 
-  <!-- ===================== WELCOME / PERSONA ===================== -->
-  <section>
-    <div class="sec-head">
-      <span class="eyebrow">Welcome Skills × Persona</span>
-      <h2>歓迎スキル・人物像との一致</h2>
-    </div>
-    <div class="matchgrid">
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>生成AIを日常的に活用</b>毎日ChatGPT / Claude / Geminiを使用。Claude Codeでの自動化にも挑戦中。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>スタートアップ的環境での新規事業</b>地元中小企業の中で、スタートアップ的な立場から0→1の海外誘致事業を推進。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>円滑なコミュニケーション</b>社員一人ひとりとの対話、海外CEOとのオンライン折衝で培った関係構築力。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>座学より実践で学ぶタイプ</b>完成度60%でも世に出し、人のフィードバックで磨く実践主義。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>主体的に動き、自分から聞ける</b>社内DXは誰かに任されたのではなく、自ら手を挙げて担当した。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>AI業界のスピード感を楽しめる</b>日進月歩のAIを追いかけ、新情報をキャッチアップすること自体を楽しんでいる。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>ビジョン「AIの感動を全ての人へ」に共感</b>AIで毎日が楽しい。この感動を一人でも多くの人に届けたいという実感がある。</div></div>
-      <div class="mitem"><span class="ck">✓</span><div class="mtx"><b>AIで社会に活躍したい明確な意志</b>将来は絶対にAI領域でキャリアを築くと決めている。</div></div>
+  <!-- CLOSING -->
+  <section id="vision" class="closing">
+    <div class="lead-row reveal"><span class="eyebrow">Vision</span><h2>これから</h2></div>
+    <p class="reveal">AIを仕事にも日常にも取り入れてから、<br class="brw"><span class="em">毎日がとても楽しくなりました。</span>この楽しさを、一人でも多くの人に届けたい——それが、私がAIに関わり続けたいいちばんの理由です。</p>
+    <p class="reveal">まだAIを使っていない現場に入り、対話を通じて“使われるAI”を届ける。<br class="brw">その最前線で挑戦したいと考えています。</p>
+    <div class="next reveal">
+      <span class="tag">今後の予定</span>
+      <p>東京のAI・DXの現場で本気で挑戦するため、<b>大学を休学し、2026年8月から東京でフルコミットできる体制</b>を整えています（7月末〜8月に転居予定）。</p>
     </div>
   </section>
 
-  <!-- ===================== MOTIVATION ===================== -->
-  <section>
-    <div class="why">
-      <span class="eyebrow">Why DigiRise</span>
-      <h2>志望動機</h2>
-      <p class="intro">
-        社内DXで「AIを使える人と使えない人で生み出せる仕事が何倍も変わる」危機感を肌で感じ、
-        この変化を一社でも多くの日本企業に届けたいと考えるようになりました。
-      </p>
-
-      <div class="why-block">
-        <h3><span class="q">01</span>応募のきっかけ</h3>
-        <p>外国企業誘致インターンの傍らで社内DXを推進する中、生成AIによって<span class="pull">1時間の業務が数分に短縮される</span>様を体感しました。「AIを使える人は、そうでない人の何人分もの仕事ができてしまう」——この危機感と興奮が、AIの本質を追求したいという想いの原点です。</p>
-      </div>
-
-      <div class="why-block">
-        <h3><span class="q">02</span>共感した哲学</h3>
-        <p>御社の<span class="pull">「テクノロジーだけに頼らない、人間味のある支援」「最後まで伴走する泥臭さ」</span>、そして「AIで人を置き換えるのではなく、働く人の負担を減らし人生を豊かにする」という哲学に強く共感しました。何より、私自身AIを業務に使い始めてから<span class="pull">毎日が本当に楽しく</span>、この感動を一人でも多くの人に届けたい——その想いが、御社のビジョン<span class="pull">「AIの利便性と感動を全ての人へ」</span>とまっすぐ重なります。「日本のAI活用率と生産性を世界No.1に」というミッションも、地方の現場を見てきた私にとって他人事ではありません。</p>
-      </div>
-
-      <div class="why-block">
-        <h3><span class="q">03</span>なぜ「クライアント常駐・現場支援型」か</h3>
-        <p>私の最大の強みは、<span class="pull">現場に入り、対話で曖昧な課題を引き出し、業務フローを理解した上で具体的な施策へ落とし込む</span>ことです。フィンランド企業の秋田進出支援では、まさにこの力で前例ゼロの状況を進出決定まで導きました。AIは知識を持つだけでは組織に使われるだけ。ドメインを理解して現場に合ったAIを当ててこそ生産性は変わる——その実装と定着に常駐で伴走できるこのコースで、私の対話力と主体性が最も活きると確信しています。</p>
-      </div>
-
-      <div class="why-block">
-        <h3><span class="q">04</span>貢献できること</h3>
-        <p>非エンジニアの目線を持ちながら自ら手を動かせるので、<span class="pull">クライアントの現場と実装の「あいだ」を翻訳する</span>役割を担えます。秋田の現場感、AIUで磨いた英語と独学力も、多様なクライアントへの伴走に活かします。何より、AI領域でアグレッシブに挑戦したい想いは誰にも負けません。</p>
-      </div>
-
-      <div class="kakugo">
-        <span class="lbl">覚悟 / Commitment</span>
-        <p>現在は秋田県在住ですが、採用をいただいた際は<b>大学を休学して7月末に東京へ転居</b>し、毎日オフィスに出社してフルコミットする覚悟です。</p>
-      </div>
-    </div>
-
-    <!-- copyable plain version -->
-    <div class="copybox">
-      <div class="bar">
-        <span>提出用テキスト（コピー可）</span>
-        <button class="copybtn" id="copyBtn" type="button">COPY</button>
-      </div>
-      <textarea id="motiv" readonly>株式会社DigiRiseの長期インターン（クライアント常駐・現場支援型）に応募いたします。国際教養大学2年の稲岡佑果（イナオカ ユカ）と申します。
-
-対話を通じてクライアントの現場に潜む曖昧なAI課題を引き出し、業務フローの理解にもとづいて実装・定着まで泥臭く伴走することで、日本の生産性向上に貢献したく志望いたします。
-
-特に募集要件にある「クライアント企業の業務フローを理解し、AI活用による改善ポイントを特定する」という点に、私はいちばん強く共感しました。AIの知識を持つだけでは、結局は組織に使われるだけのAIで終わってしまう。業務フローとドメインを深く理解したうえで、その現場に本当に合ったAIを導入してこそ初めて生産性は変わる——これが私の大切にしている考えです。
-
-この姿勢が最も発揮された経験が、フィンランド企業の秋田進出を支援するインターンです。前例がなく、相手企業はCEO交代直後で「実証実験で何を得たいのか」自体が曖昧、返信も週1回あるかどうかという状況でした。私は結果を急がず「まず相手を理解する」ことに注力し、自ら働きかけてCEOとの週次ミーティングを設定。対話を重ね、漠然とした要望を「商品の拡販ではなく、企業の哲学を秋田にローカライズして体験してもらう」という具体的な施策へ落とし込みました。資料作成やデータ分析には生成AIを活用し、実証実験は高いCVRを記録、秋田進出の決定に結実しました。
-
-また、与えられた業務に留まらず社内ワークフローの課題を自ら見つけ、社内DX推進も担当しました。生成AIによって1時間かかっていた業務が数分に短縮される様を体感し、「AIを使える人は、そうでない人の何人分もの仕事ができてしまう」という危機感を抱いたことが、AIの本質を追求したいと考えた原点です。
-
-エンジニアとしての専門知識はまだこれからですが、Claude Codeなどの生成AIツールを日々活用し、業務の自動化にも少しずつ取り組んでいます。また、頭の中で考え込むより完成度60%でも形にして世に出すことを大切にしており、座学より実践で学ぶ環境こそ自分が伸びる場だと考えています。
-
-私自身、AIを業務に使い始めてから毎日が本当に楽しく、この感動を一人でも多くの人に届けたいという想いは、御社のビジョン「AIの利便性と感動を全ての人へ」とまっすぐ重なります。「テクノロジーだけに頼らない、人間味のある支援」「最後まで伴走する泥臭さ」という御社の哲学のもとで、現場に入り込み、対話とドメイン理解で本当に役立つAIを届けたい。その挑戦に、私の対話力と主体性が最も活きると確信しています。
-
-現在は秋田県在住ですが、採用をいただいた際は大学を休学して7月末に東京へ転居し、毎日オフィスに出社してフルコミットする覚悟です。どうぞよろしくお願いいたします。</textarea>
-    </div>
-  </section>
-
-  <footer class="foot">
-    <span class="nm">稲岡 佑果（イナオカ ユカ）</span>
-    <span>株式会社DigiRise 長期インターン応募 ／ 2026年</span>
-  </footer>
+  <footer>稲岡 佑果 ／ Portfolio 2026</footer>
 
 </div>
 </div>
 
 <script>
+  document.documentElement.lang = 'ja';
   (function(){
-    var btn=document.getElementById('copyBtn');
-    var ta=document.getElementById('motiv');
-    if(!btn||!ta)return;
-    btn.addEventListener('click',function(){
-      ta.select();ta.setSelectionRange(0,99999);
-      var ok=false;
-      try{ok=document.execCommand('copy');}catch(e){}
-      if(navigator.clipboard){navigator.clipboard.writeText(ta.value).catch(function(){});}
-      btn.textContent=ok!==false?'COPIED ✓':'SELECT & COPY';
-      setTimeout(function(){btn.textContent='COPY';},1800);
-    });
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('in'); }); return;
+    }
+    // scroll reveal
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+
+    // scroll-spy: highlight current section in nav
+    var links = document.querySelectorAll('.navwrap nav a');
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+    if(links[0]){ links[0].classList.add('active'); }  // default: top = 経歴
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && map[e.target.id]){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          map[e.target.id].classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    document.querySelectorAll('section[id]').forEach(function(s){ spy.observe(s); });
   })();
 </script>
